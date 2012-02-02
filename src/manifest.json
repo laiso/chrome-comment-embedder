@@ -1,0 +1,28 @@
+{
+  "name": "はてなブックマークのお気に入りユーザーのコメントを埋め込む",
+  "version": "0.0.1",
+  "description": "はてなブックマークのお気に入りユーザーのコメントを埋め込むGoogle Chrome 拡張です。",
+  "icons": {
+    "16": "images/Icon150.png",
+    "48": "images/Icon150.png",
+    "128": "images/Icon150.png"
+  },
+  "permissions": [
+      "http://*/*",
+      "https://*/*"
+  ],
+    "content_scripts":[
+        {
+            "run_at": "document_end",
+            "all_frames": false,
+            "matches": [
+                "http://*/*",
+                "https://*/*"
+            ],
+            "css":["css/widget.css"],
+            "js":[
+                "js/main.js"
+            ]
+        }
+    ]
+}
